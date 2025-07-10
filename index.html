@@ -20,7 +20,7 @@
 
         button[slot="ar-button"] {
             position: fixed;
-            bottom: 80%;
+            bottom: 20%;
             left: 50%;
             transform: translateX(-50%);
             background: #007AFF;
@@ -47,7 +47,8 @@
 
 <body>
     <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="3D model" ar
-        ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate shadow-intensity="1">
+        ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" camera-controls auto-rotate shadow-intensity="1"
+        disable-zoom>
 
         <button slot="ar-button" id="ar-button">ARで見る</button>
     </model-viewer>
