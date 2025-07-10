@@ -17,6 +17,31 @@
             width: 100vw;
             height: 100vh;
         }
+
+        button[slot="ar-button"] {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        button[slot="ar-button"]:hover {
+            background: #0056CC;
+        }
+
+        button[slot="ar-button"]:active {
+            transform: translateX(-50%) scale(0.95);
+        }
     </style>
 </head>
 
