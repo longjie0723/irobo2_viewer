@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Model Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        model-viewer {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        button[slot="ar-button"] {
+            position: fixed;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007AFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        button[slot="ar-button"]:hover {
+            background: #0056CC;
+        }
+
+        button[slot="ar-button"]:active {
+            transform: translateX(-50%) scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    <model-viewer src="https://longjie0723.github.io/irobo2_viewer/irobo2_hood.glb" alt="3D model" ar
+        ar-modes="webxr scene-viewer quick-look" ar-scale="fixed" ar-placement="floor" camera-controls auto-rotate shadow-intensity="1"
+        disable-zoom>
+
+        <button slot="ar-button" id="ar-button">ARで見る</button>
+    </model-viewer>
+</body>
+
+</html>
